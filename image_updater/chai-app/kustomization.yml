@@ -6,6 +6,4 @@ resources:
   - service.yml
   - secret.yml
 
-images:
-  - name: dockerhub0600/chai-devops
-    newTag: v1.0.1
+
