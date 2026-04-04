@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - dockerhub0600/chai-devops:v1.0.1

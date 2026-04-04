@@ -11,7 +11,9 @@ metadata:
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds # Configures image updater to write changes back to Git using provided secret
 
     # Update strategy for chai-app image
-    argocd-image-updater.argoproj.io/chai-app.update-strategy: semver # Uses semantic versioning for image updates
+    argocd-image-updater.argoproj.io/chai-app.update-strategy: newest-build # Uses semantic versioning for image updates
+    argocd-image-updater.argoproj.io/chai-app.allow-tags: regexp:^v.*
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
 
 spec:
   project: default              # Associates this Application with the 'default' ArgoCD project
